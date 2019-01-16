@@ -14,13 +14,14 @@ public class coin : MonoBehaviour
     {
         transform.rotation = Quaternion.Euler(0, Time.timeSinceLevelLoad * 60f, -90);
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.collider.tag == "Player")
+        if(isActive == true && other.tag == "Player")
         {
             GetComponent<MeshRenderer>().enabled = false;
             GetComponent<AudioSource>().Play();
             isActive = false;
         }
+
     }
 }
