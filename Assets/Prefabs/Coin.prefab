@@ -88,7 +88,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7733776494697147182}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -117,7 +117,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3baa66e3ba73d474b8cda5c3c06524f2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ef96419bc4d020840a62ebf6ec6f1e59, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.694
   m_Pitch: 1

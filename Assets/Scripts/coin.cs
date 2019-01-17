@@ -6,14 +6,11 @@ public class coin : MonoBehaviour
 {
     public bool isActive = true;
 
-    void Start()
-    {
-        
-    }
     void Update()
     {
-        transform.rotation = Quaternion.Euler(0, Time.timeSinceLevelLoad * 60f, -90);
+        transform.rotation = Quaternion.Euler(0, Time.timeSinceLevelLoad * 60f, -90);     
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if(isActive == true && other.tag == "Player")
@@ -21,7 +18,8 @@ public class coin : MonoBehaviour
             GetComponent<MeshRenderer>().enabled = false;
             GetComponent<AudioSource>().Play();
             isActive = false;
-        }
 
+            FindObjectOfType<GameController>().CoinsCollection();
+        }        
     }
 }

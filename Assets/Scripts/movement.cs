@@ -8,6 +8,9 @@ public class movement : MonoBehaviour
 
     void Update()
     {
+        if (FindObjectOfType<GameController>().EndGameText.enabled == true)
+            return;
+
         var direction = Vector3.zero;
 
         if (Input.GetKey(KeyCode.UpArrow))

@@ -17,6 +17,5 @@ public class camera : MonoBehaviour
         
         var targetPosition = playerPosition.position + shift * ((speed / 30 + 1f));
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * 2f);
-
     }
 }
