@@ -1,2 +1,2 @@
 # RacerGame
-Gra na zaliczenie na silniki gier
+easy racer game, Created as project for studies.
