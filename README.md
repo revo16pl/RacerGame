@@ -1,2 +1,2 @@
 # RacerGame
-easy racer game, Created as project for studies.
+Racer game on Unity Engine, Created as project for studies.
