@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EndofGame : MonoBehaviour
 {
+    public AudioSource winingSound;
+    public AudioSource losingSound;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
@@ -19,7 +22,19 @@ public class EndofGame : MonoBehaviour
 
     public void EndGame(bool win, GameController gameController)
     {
-        gameController.EndGameText.text = win ? "YOU WIN!" : "YOU LOSE!";
-        gameController.EndGameText.enabled = true;
+
+        if(win)
+        {
+            gameController.EndGameText.text = "YOU WIN!";
+            gameController.EndGameText.enabled = true;
+            winingSound.Play();
+        }
+        else
+        {
+            gameController.EndGameText.text = "YOU LOSE";
+            gameController.EndGameText.enabled = true;
+            losingSound.Play();
+        }
+        
     }
 }
